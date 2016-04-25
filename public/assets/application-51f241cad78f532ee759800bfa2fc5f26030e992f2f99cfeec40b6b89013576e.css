@@ -1,0 +1,104 @@
+/* line 4, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+body {
+  padding-left: 30px;
+  padding-top: 70px;
+}
+
+/* navbar */
+/* line 10, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+.navbar-default {
+  background-color: #496572;
+  border-color: #496572;
+}
+
+/* title */
+/* line 15, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+/* line 18, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #5E5E5E;
+}
+
+/* link */
+/* line 23, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+/* line 26, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #333;
+}
+
+/* line 30, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #E7E7E7;
+}
+
+/* line 36, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #D5D5D5;
+}
+
+/* caret */
+/* line 43, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+  border-top-color: #777;
+  border-bottom-color: #777;
+}
+
+/* line 47, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+  border-top-color: #333;
+  border-bottom-color: #333;
+}
+
+/* line 52, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+  border-top-color: #555;
+  border-bottom-color: #555;
+}
+
+/* mobile version */
+/* line 59, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+.navbar-default .navbar-toggle {
+  border-color: #DDD;
+}
+
+/* line 62, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #DDD;
+}
+
+/* line 66, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #CCC;
+}
+
+@media (max-width: 767px) {
+  /* line 70, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+
+  /* line 73, /Users/Upheus1/clients/minio-ROR/minio-store/app/assets/stylesheets/products.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+  }
+}

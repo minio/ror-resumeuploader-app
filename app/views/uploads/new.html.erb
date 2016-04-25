@@ -1,0 +1,23 @@
+
+<div class="container" style="padding-top:100px;">
+		
+	<div class="jumbotron" style="background-color:#88BCD4;">
+		<h1> Easy Resume Uploader  </h1>
+		<p> No forms. Simply upload your resume </p>
+	</div>
+	<div class="row">
+		
+		<div class="col-offset-lg-2 col-lg-12">
+			<h1>Upload your Resume</h1>	
+			
+			<div class="well"  style="background-color: #EFE0D5;">
+			<%= form_tag uploads_path,  :html => {:multipart => true}, enctype: 'multipart/form-data' do %>
+			    <%= file_field_tag :file , :style=> "margin-left: 450px; " %>  <br/>
+			
+			    <%= submit_tag 'Upload file' , :class=>"btn btn-block btn-lg", :style=>"background-color:#f14621;"  %>
+			<% end %>
+			</div>
+		</div>
+	</div>
+
+</div>
