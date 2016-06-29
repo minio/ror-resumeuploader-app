@@ -1,6 +1,6 @@
- # RoR Resume Uploader App
+# RoR Resume Uploader App
 
-![Screenshot](./assets/1.png)
+![Screenshot](./app/assets/images/minio-RoR.png)
 
 This example will guide you through the code to build a simple Ruby on Rails App that works with a Minio Server. We will learn how to use the **aws-sdk** in our rails app to upload objects to a Minio Server. Full code is available here : https://github.com/minio/ror-resumeuploader-app, released under Apache 2.0 License.
 
@@ -10,7 +10,7 @@ This example will guide you through the code to build a simple Ruby on Rails App
 * [ruby 2.0](https://www.ruby-lang.org/en/documentation/installation/#package-management-systems) and above
 * [rails 4.0](http://guides.rubyonrails.org/v4.0/)  and above
 
-   
+
 ## 2. Dependencies
 * aws-sdk v2.0 gem
 
@@ -49,7 +49,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
- 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -62,10 +62,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-# Add the aws sdk gem 
+# Add the aws sdk gem
 gem 'aws-sdk', '~> 2'
 ```
-Note: If running this example on Ubuntu, please include [therubyracer](https://github.com/cowboyd/therubyracer) gem. 
+Note: If running this example on Ubuntu, please include [therubyracer](https://github.com/cowboyd/therubyracer) gem.
 
 ## 4. Set Up Bucket
 We've created a public minio server called https://play.minio.io:9000 for developers to use as a sandbox. Minio Client mc is preconfigured to use the play server. Create a bucket called 'resumes' on play.minio.io. Use the `mc mb` command to accomplish this.
@@ -100,26 +100,26 @@ class UploadsController < ApplicationController
   require 'aws-sdk'
   def new
   end
-  
+
   def create   
-    # Create a new s3 resource with a new s3 client. 
+    # Create a new s3 resource with a new s3 client.
     s3 = Aws::S3::Resource.new(Aws::S3::Client.new)  
-    
-    # Create a key. 
+
+    # Create a key.
     key = File.basename params[:file].path
-    
+
     # Set the bucket and the key.
     obj = s3.bucket("resumes").object(params[:file].original_filename)
-    
-    # Upload the file. 
+
+    # Upload the file.
     obj.upload_file(params[:file].open)
-   
+
     # Save the uploaded details to the local database.
     @upload = Upload.new(
             url: obj.public_url,
             name: obj.key
     )     
-           
+
     if @upload.save
         redirect_to uploads_path, success: 'File successfully uploaded'
     else
@@ -131,8 +131,8 @@ class UploadsController < ApplicationController
   def index
     @uploads = Upload.all
   end
-  
-  
+
+
 end
 ```
 NOTE: In this particular example, we complete the upload process using the upload_file api call available via the aws-sdk library. If we want to process the upload on the view, we would post the file to a presigned URL that is able to accept our POST submission.
@@ -141,12 +141,12 @@ NOTE: In this particular example, we complete the upload process using the uploa
 We create a form which can do a multipart upload. We will use a file_field_tag to choose the file from the filesystem and a submit tag to submit the form to the upload controller for processing.
 ```html
 <div class="col-offset-lg-2 col-lg-12">
-			<h1>Upload your Resume</h1>	
-			
+			<h1>Upload your Resume</h1>
+
 			<div class="well"  style="background-color: #EFE0D5;">
 				<%= form_tag uploads_path,  :html => {:multipart => true}, enctype: 'multipart/form-data' do %>
 			    <%= file_field_tag :file  %>  <br/>
-			
+
 			    <%= submit_tag 'Upload file' , :class=>"btn btn-block btn-danger"  %>
 			  <% end %>
 			</div>
@@ -161,5 +161,5 @@ $ rails s
 Now if you visit http://localhost:3000 you should be able to see the example application.
 
 ## 9. Explore Further
-- [Using `minio-js` client SDK with Minio Server](/docs/javascript-client-quickstart-guide) 
+- [Using `minio-js` client SDK with Minio Server](/docs/javascript-client-quickstart-guide)
 - [Minio JavaScript client SDK API Reference](/docs/javascript-client-api-reference)
