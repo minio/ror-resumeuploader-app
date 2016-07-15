@@ -1,6 +1,7 @@
 # RoR Resume Uploader App
 
-![Screenshot](https://github.com/minio/ror-resumeuploader-app/blob/master/docs/screenshots/minio-RoR1.png)
+![Screenshot](https://github.com/minio/ror-resumeuploader-app/blob/master/docs/screenshots/minio-RoR1.png?raw=true)
+
 This example will guide you through the code to build a simple Ruby on Rails App that works with a Minio Server. We will learn how to use the **aws-sdk** in our rails app to upload objects to a Minio Server. Full code is available here : https://github.com/minio/ror-resumeuploader-app, released under Apache 2.0 License.
 
 ## 1. Prerequisites
