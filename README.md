@@ -6,7 +6,7 @@ This example will guide you through the code to build a simple Ruby on Rails App
 
 ## 1. Prerequisites
 
-* Install mc  from [here](https://docs.minio.io/docs/minio-client-quick-start-guide).
+* Install mc  from [here](https://docs.minio.io/docs/minio-client-quickstart-guide).
 * Install Minio Server from [here](https://docs.minio.io/docs/minio ).
 * [ruby 2.0](https://www.ruby-lang.org/en/documentation/installation/#package-management-systems) and above
 * [rails 4.0](http://guides.rubyonrails.org/v4.0/)  and above
