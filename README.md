@@ -20,7 +20,7 @@ This example will guide you through the code to build a simple Ruby on Rails App
 
 Get the code from here and do a bundle install as shown below.
 
-```sh
+```
 
 $ git clone https://github.com/minio/ror-resumeuploader-app
 $ cd ror-resumeuploader-app
@@ -80,7 +80,7 @@ Note: If running this example on Ubuntu, please include [therubyracer](https://g
 
 We've created a public minio server called https://play.minio.io:9000 for developers to use as a sandbox. Minio Client mc is preconfigured to use the play server. Create a bucket called 'resumes' on play.minio.io. Use the `mc mb` command to accomplish this.
 
-```sh
+```
 
 $ mc mb play/resumes
 
@@ -184,7 +184,7 @@ We create a form which can do a multipart upload. We will use a file_field_tag t
 
 The full code is available here : https://github.com/minio/ror-resumeuploader-app.  Start the rails server as shown below.
 
-```sh
+```
 
 $ rake db:migrate
 $ rails s
