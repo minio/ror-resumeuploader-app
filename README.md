@@ -22,9 +22,9 @@ Get the code from here and do a bundle install as shown below.
 
 ```sh
 
-$ git clone https://github.com/minio/ror-resumeuploader-app
-$ cd ror-resumeuploader-app
-$ bundle install
+git clone https://github.com/minio/ror-resumeuploader-app
+cd ror-resumeuploader-app
+bundle install
 
 ```
 
@@ -78,11 +78,11 @@ Note: If running this example on Ubuntu, please include [therubyracer](https://g
 
 ## 4. Set Up Bucket
 
-We've created a public minio server called https://play.minio.io:9000 for developers to use as a sandbox. Minio Client mc is preconfigured to use the play server. Create a bucket called 'resumes' on play.minio.io. Use the `mc mb` command to accomplish this.
+We've created a public minio server called https://play.minio.io:9000 for developers to use as a sandbox. Minio Client mc is preconfigured to use the play server. Create a bucket called ``resumes`` on play.minio.io. Use the ``mc mb`` command to accomplish this.
 
 ```sh
 
-$ mc mb play/resumes
+mc mb play/resumes
 
 ```
 
@@ -186,8 +186,8 @@ The full code is available here : https://github.com/minio/ror-resumeuploader-ap
 
 ```sh
 
-$ rake db:migrate
-$ rails s
+rake db:migrate
+rails s
 
 ```
 Now if you visit http://localhost:3000 you should be able to see the example application.
